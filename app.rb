@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'active-reload'
+# require 'active-reload'
 
 get '/' do 
   erb :index
