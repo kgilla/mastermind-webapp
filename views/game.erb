@@ -1,40 +1,61 @@
 <div class="left_half">
+  
   <h1>Mastermind</h1>
+  
   <form method='POST' action='/game'>
+  
   <%(0).upto(3).each do |i| %>
     <select id="user_color_<%= i %>" name="user_color_<%= i %>">
-      <option value="1">Red</option>
-      <option value="2">Green</option>
-      <option value="3">Blue</option>
-      <option value="4">Yellow</option>
-      <option value="5">Orange</option>
-      <option value="6">Purple</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+      <option value="orange">Orange</option>
+      <option value="purple">Purple</option>
     </select> 
   <% end %><br/>
+  
   <input type="submit" value="Submit" href="/game"/>  
+  
   </form>
   <form method='GET' action='/'>
     <input type="submit" value="Home" href="/"/>
   </form>
-  <%= locals %>
+  <%= GAME.secret_key %><br/>
+  <%= session[:guess_list].last %>
+  <%= @current_guess.temp_key if !@current_guess.temp_key.empty? %>
 </div>
+
 <div class="right_half">
+  
   <div class="game_board">
     <%(11).downto(0).each do |r| %>
       <div class="round_pegs" id="rp_<%= r %>">
         <%(0).upto(3).each do |i| %>
-        <div class="colored_peg" id="rp_<%= r %>cp_<%= i %>"></div>
+          
+          <% if !session[:guess_list][r].nil? %>
+          <div class="colored_peg" 
+          style="background-color:<%= session[:guess_list][r][i]%>"></div>
+          <% else %> 
+          <div class="colored_peg" style="background-color: black"></div>
+          <% end %>
+
         <% end %> 
       </div>
     <% end %>
   </div>
+  
   <div class="game_board_key">
     <%(11).downto(0).each do |r| %>
       <div class="round_keys" id="rk_<%= r %>">
         <%(0).upto(3).each do |i| %>
+
         <div class="key_peg" id="rk_<%= r %>kp_<%= i %>"></div>
+        
         <% end %> 
       </div>
     <% end %>
   </div>
 </div>
+
+

@@ -1,20 +1,24 @@
 require 'sinatra'
 
+require_relative './lib/game'
+require_relative './lib/guess'
+
 enable :sessions
 
-list = []
-
 get '/' do 
-  list = []
+  session.clear
   erb :index
 end
 
 get '/game' do
-  @session = session
+  session[:guess_list] = []
+  session[:key_list] = []
+  GAME = Game.new
   erb :game
 end
 
 post '/game' do
-  list << params.values
-  erb :game, :locals => { :list => list }
+  session[:guess_list] << params.values
+  @current_guess = Guess.new
+  erb :game
 end
