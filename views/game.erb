@@ -22,8 +22,8 @@
     <input type="submit" value="Home" href="/"/>
   </form>
   <%= GAME.secret_key %><br/>
-  <%= session[:guess_list].last %>
-  <%= @current_guess.temp_key if !@current_guess.temp_key.empty? %>
+  <%= session[:key_list] %>
+  <%= session[:guess_list] %>
 </div>
 
 <div class="right_half">
@@ -49,8 +49,13 @@
     <%(11).downto(0).each do |r| %>
       <div class="round_keys" id="rk_<%= r %>">
         <%(0).upto(3).each do |i| %>
-
-        <div class="key_peg" id="rk_<%= r %>kp_<%= i %>"></div>
+          
+          <% if !session[:key_list][r].nil? %>
+          <div class="key_peg" 
+          style="background-color: <%= session[:key_list][r][i]%>"></div>
+          <% else %> 
+          <div class="key_peg" style="background-color: black"></div>
+          <% end %>
         
         <% end %> 
       </div>
