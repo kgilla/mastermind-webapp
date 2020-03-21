@@ -1,25 +1,29 @@
-require_relative "guess", "game_updater"
+require_relative "guess"
 
 class Game
-  attr_reader :secret_key, :round_total
+  attr_reader :secret_key, :round_total, :guess_list
   
   def initialize
     @secret_key = generate_key()
     @round_total = 12
   end
 
-  def round_data (new_game)
-    temp_key = new_game.secret_key.slice(0, 4)
-    current_guess = get_guess()
-    correct_hint = show_correct(current_guess, temp_key)
-    hint_array = make_hint_array(correct_hint)
-    single_round = make_arr(hint_array, current_guess)
-    return single_round
+  def generate_key 
+    4.times.map do 
+      ["red","green","blue","yellow","orange","purple"].sample
+    end
   end
 
-  def generate_key 
-    array = []
-    4.times {array.push(rand(1...6).to_s)}
-    return array
+  def check_win
+
   end
+
+  def winner 
+
+  end
+
+  def loser
+
+  end
+end
   
