@@ -7,12 +7,13 @@ class Guess
     @current_guess = guess.slice(0..3)
     @temp_key = GAME.secret_key.slice(0..3)
     @hint_key = get_hint_key
+    GAME.check_win(guess)
   end
 
   def get_hint_key
     key_array = []
-    guess_copy = @current_guess.dup
-    key_copy = @temp_key.dup
+    guess_copy = @current_guess
+    key_copy = @temp_key
 
     guess_copy.each_with_index do |val, i|
       if guess_copy[i] == key_copy[i]
@@ -24,7 +25,7 @@ class Guess
 
     guess_copy.each_with_index do |guess, i|
       key_copy.each_with_index do |key, t|
-        if guess_copy[i] == key_copy[t] && !guess_copy[i] == key_copy[t]
+        if guess_copy[i] == key_copy[t] && !guess_copy[i].nil?
           guess_copy[i] = nil
           temp_key[t] = nil
           key_array << "white"

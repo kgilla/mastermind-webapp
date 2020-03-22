@@ -1,36 +1,44 @@
 <div class="left_half">
   
   <h1>Mastermind</h1>
-  
-  <form method='POST' action='/game'>
+  <h3>Rules</h3>
+  <ul class="rules">
+    <li>Each round the player must guess 4 colors</li>
+    <li>The pegs on the right give feedback based on your guess:</li>
+    <li>A red peg is a correct color in the correct position</li>
+    <li>A white pegs is a correct color in an incorrect position</li>
+    <li>There can be duplicate colors</li>
+    <li>Have fun!</li>
+  </ul>
+  <form class="game_form" method='POST' action='/game'>
   
   <%(0).upto(3).each do |i| %>
     <select id="user_color_<%= i %>" name="user_color_<%= i %>">
-      <option value="red">Red</option>
-      <option value="green">Green</option>
-      <option value="blue">Blue</option>
-      <option value="yellow">Yellow</option>
-      <option value="orange">Orange</option>
-      <option value="purple">Purple</option>
+      <option value=" #c0392b ">Red</option>
+      <option value=" #27ae60 ">Green</option>
+      <option value=" #3498db ">Blue</option>
+      <option value=" #f1c40f ">Yellow</option>
+      <option value=" #e67e22 ">Orange</option>
+      <option value=" #8e44ad ">Purple</option>
     </select> 
   <% end %><br/>
   
-  <input type="submit" value="Submit" href="/game"/>  
+  <input class="round_submit" type="submit" value="Guess!" href="/game"/>  
   
   </form>
   <form method='GET' action='/'>
     <input type="submit" value="Home" href="/"/>
   </form>
-  <%= GAME.secret_key %><br/>
-  <%= session[:key_list] %>
-  <%= session[:guess_list] %>
+
+  <h3> Round # <%= GAME.round_count%>! </h3><br/>
+  <h3><%= GAME.end_message %>
 </div>
 
 <div class="right_half">
   
   <div class="game_board">
     <%(11).downto(0).each do |r| %>
-      <div class="round_pegs" id="rp_<%= r %>">
+      <div class="round_pegs">
         <%(0).upto(3).each do |i| %>
           
           <% if !session[:guess_list][r].nil? %>
@@ -47,7 +55,7 @@
   
   <div class="game_board_key">
     <%(11).downto(0).each do |r| %>
-      <div class="round_keys" id="rk_<%= r %>">
+      <div class="round_keys">
         <%(0).upto(3).each do |i| %>
           
           <% if !session[:key_list][r].nil? %>

@@ -1,55 +1,95 @@
 body {
-  display: block;
-  height: 95vh;
-  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: grey;
+  height: 100vh;
+  width: 100vw;
 }
 
 header {
-  height: 10vh;
-  background-color: coral;
+  width: auto;
+  background-color: black;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  width: 60px;
 }
 
 main {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 5px black solid;
+  height: 800px;
+  width: 800px;
+  margin: 5%;
 }
 
 .left_half {
-  width: 70vw;
-  background-color: blueviolet;
+  width: 60%;
+  text-align: center;
+  padding: 2%;
+  background-color: #ccd1d1;
+}
+
+.rules {
+  text-align: left;
+  margin: 5%;
+
+}
+
+.select {
+  background-color: black;
+  padding: 2%;
+}
+
+.game_form {
+  padding: 5%;
+}
+
+.game_submit {
+  margin: 50px;
 }
 
 .right_half {
+  border: 2px black solid;
   display: flex;
-  width: 30vw;
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: darkgreen;
+  width: 40%;
+  justify-content: center;
+  align-content: center;
 }
 
 .game_board {
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5px;
-  height: 80vh;
+  grid-gap: 1px;
+  padding: 2%;
+  height: auto;
   width: 80%;
-  background-color: cornflowerblue;
+  background-color: #2c3e50;
 }
 
 .round_pegs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-  border: black solid 1px;
   padding: 1%;
 }
 
 .colored_peg {
-  color: black;
-  border: black solid 1px;
+  border: black solid 2px;
   border-radius: 50%;
   margin: 1px;
-  background-color: cadetblue;
 }
 
 .game_board_key {
@@ -57,9 +97,10 @@ main {
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5px;
-  height: 80vh;
+  height: auto;
   width: 20%;
-  background-color: cornflowerblue;
+  background-color: #2c2c50;
+  border: black 2px solid;
 }
 
 .round_keys {
@@ -68,22 +109,16 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2px;
   padding: 5%;
-  border: black solid 1px;
 }
 
 .key_peg {
   color: black;
-  border: black solid 1px;
+  border: black solid 2px;
   border-radius: 50%;
   margin: 1px;
-  background-color: purple;
-}
-
-#cp_1 {
-  background-color: black;
 }
 
 footer {
-  height: 5vh;
-  background-color: coral;
+  height: 5%;
+  background-color: black;
 }
