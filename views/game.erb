@@ -1,37 +1,40 @@
 <div class="left_half">
-  
-  <h1>Mastermind</h1>
-  <h3>Rules</h3>
-  <ul class="rules">
-    <li>Each round the player must guess 4 colors</li>
-    <li>The pegs on the right give feedback based on your guess:</li>
-    <li>A red peg is a correct color in the correct position</li>
-    <li>A white pegs is a correct color in an incorrect position</li>
-    <li>There can be duplicate colors</li>
-    <li>Have fun!</li>
-  </ul>
-  <form class="game_form" method='POST' action='/game'>
-  
-  <%(0).upto(3).each do |i| %>
-    <select id="user_color_<%= i %>" name="user_color_<%= i %>">
-      <option value=" #c0392b ">Red</option>
-      <option value=" #27ae60 ">Green</option>
-      <option value=" #3498db ">Blue</option>
-      <option value=" #f1c40f ">Yellow</option>
-      <option value=" #e67e22 ">Orange</option>
-      <option value=" #8e44ad ">Purple</option>
-    </select> 
-  <% end %><br/>
-  
-  <input class="round_submit" type="submit" value="Guess!" href="/game"/>  
-  
-  </form>
-  <form method='GET' action='/'>
-    <input type="submit" value="Home" href="/"/>
-  </form>
+  <div class="left_box">
+    
+    <h1>Mastermind</h1>
 
-  <h3> Round # <%= GAME.round_count%>! </h3><br/>
-  <h3><%= GAME.end_message %>
+    <div class="game_info">
+      <h2> Round # <%= GAME.round_count%> </h2><br/>
+      <p><%= GAME.message %></p>
+    </div>
+    
+    <form class="game_form" method='POST' action='/game'>
+    <h4>Color Picker</h4><br/>
+    <%(0).upto(3).each do |i| %>
+      <select class="user_color" name="user_color_<%= i %>">
+        <option value=" #f44336 ">Red</option>
+        <option value=" #27ae60 ">Green</option>
+        <option value=" #3498db ">Blue</option>
+        <option value=" #f1c40f ">Yellow</option>
+        <option value=" #e67e22 ">Orange</option>
+        <option value=" #8e44ad ">Purple</option>
+      </select> 
+    <% end %><br/>
+    <input class="round_submit" type="submit" value="Guess!" href="/game"/>  
+    </form>
+
+    <div class="game_rules">
+      <h3>Rules</h3>
+      <ul>
+        <li>Each round the player must guess 4 colors</li>
+        <li>The pegs on the right give feedback based on your guess:</li>
+        <li>A red peg is a correct color in the correct position</li>
+        <li>A white pegs is a correct color in an incorrect position</li>
+        <li>There can be duplicate colors</li>
+        <li>Have fun!</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="right_half">
