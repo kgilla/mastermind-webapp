@@ -6,6 +6,15 @@ body {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3vh;
+}
+
 header {
   height: 2%;
 }
@@ -22,11 +31,6 @@ header {
   float: left;
 }
 
-h6 {
-  font-weight: bold;
-  font-size: 2.5vh;
-}
-
 .nav_title {
   display: block;
   color: white;
@@ -37,8 +41,12 @@ h6 {
   outline: none;
 }
 
+a {
+  outline: none;
+}
+
 a:hover {
-  background-color: #111;
+  background-color: #2c2c50;
   text-decoration: none;
   color: white;
   outline: none;
@@ -61,7 +69,7 @@ main {
 
 .left_box {
   background-color: #37474f;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
 }
 
 .game_info {
@@ -74,46 +82,43 @@ main {
 }
 
 .user_color {
-  font-size: 2vh;
+  font-size: 2.5vh;
+  text-align: center;
   font-weight: bold;
-  border: 3px black solid;
+  border: 0.1vh black solid;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 2vh;
   padding: 2%;
-  box-shadow: 0 18px 16px -16px black;
-  outline: none;
-}
-
-.user_color:hover {
-  background-color: black;
-  color: white;
+  margin: 1%;
+  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
 }
 
 .round_submit {
   font-size: 3vh;
   font-weight: bold;
-  margin: 5%;
-  border: 2px black solid;
-  border-radius: 10px;
-  padding: 2%;
-  box-shadow: 0 18px 16px -16px black;
+  margin: 5vh;
+  border: 0.1vh black solid;
+  border-radius: 2vh;
+  padding: 2vh;
+  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
   outline: none;
 }
 
-.round_submit:hover {
-  background-color: black;
+.round_submit:hover,
+.user_color:hover {
+  background-color: #2c2c50;
   color: white;
 }
 
 .game_rules {
   text-align: left;
-  padding: 2%;
+  padding: 2vh;
 }
 
 .right_half {
   display: flex;
   width: 35%;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
 }
 
 .game_board {
@@ -127,14 +132,14 @@ main {
 .round_pegs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-bottom: 1px black solid;
+  border-bottom: 0.1vh black solid;
   padding: 1%;
 }
 
 .colored_peg {
-  border: black solid 2px;
+  border: black solid 0.3vh;
   border-radius: 50%;
-  box-shadow: inset 0 0 4px #000000;
+  box-shadow: inset 0 0 1vh #000000;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -151,13 +156,13 @@ main {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  border: 1px black solid;
+  border: 0.1vh black solid;
   padding: 5%;
 }
 
 .key_peg {
-  border: black solid 3px;
-  box-shadow: inset 0 0 6px #000000;
+  border: black solid 0.3vh;
+  box-shadow: inset 0 0 1vh #000000;
   border-radius: 50%;
   margin: 5% 10% 5% 10%;
 }
@@ -168,56 +173,43 @@ footer {
 
 .main_title {
   font-size: 10vh;
-  padding-bottom: 2%;
+  padding: 1%;
+  margin-bottom: 5%;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-.title_box {
+.title_box,
+.multi_box {
   background-color: #37474f;
-  height: 80%;
-  width: 80%;
+  height: 50%;
+  width: 70%;
   margin: auto;
   padding: 2%;
   text-align: center;
-  box-shadow: 0 18px 16px -16px black;
+  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
 }
 
 .title_choice {
-  display: block;
-  width: 100%;
-  font-size: 8vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 3vh;
+  border: solid black 0.4vh;
+  margin: 5%;
+  box-shadow: inset 0 0 1vh #000000;
 }
 
-button {
-  background-color: #37474f;
-  border: solid black 2px;
+.single_choice,
+.multi_choice {
+  height: 50%;
   padding: 2%;
   color: white;
-  font-size: 6vh;
-  width: 20vw;
-  text-decoration: none;
-  margin: 1%
 }
 
-button a {
-  color: white;
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: #111;
-  text-decoration: none;
-  color: white;
-  outline: none;
+.multi_choice {
+  border-top: solid black 0.4vh;
 }
 
 .multi_box {
-  padding: 5%;
-  background-color: #37474f;
-  height: 50%;
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  box-shadow: 0 18px 16px -16px black;
-  border: solid black 3px;
+  padding: 8%;
 }

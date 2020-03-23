@@ -2,9 +2,6 @@
   <nav class="main_nav">
     <ul class="nav_list">
       <li class="nav_item">
-        <h6 class="nav_title">Mastermind!</h6>
-      </li>
-      <li class="nav_item">
         <a href="/" class="nav_title">Title Screen</a>
       </li>
       <li class="nav_item">
@@ -19,7 +16,7 @@
     
     <div class="game_info">
       <h2> Round # <%= GAME.round_count%> </h2><br/>
-      <h5><%= GAME.message %></h5>
+      <h2><%= GAME.message %></h2>
     </div>
     
     <form class="game_form" method='POST' action='/game'>
