@@ -1,15 +1,22 @@
 <div class="left_half">
+  <nav class="main_nav">
+    <ul class="nav_list">
+      <li class="nav_item">
+        <a href="/">Title Screen</a>
+      </li>
+      <li class="nav_item">
+        <a href="/game">New Game</a>
+      </li>
+    </ul>
+  </nav>
   <div class="left_box">
     
-    <h1>Mastermind</h1>
-
     <div class="game_info">
       <h2> Round # <%= GAME.round_count%> </h2><br/>
       <p><%= GAME.message %></p>
     </div>
     
     <form class="game_form" method='POST' action='/game'>
-    <h4>Color Picker</h4><br/>
     <%(0).upto(3).each do |i| %>
       <select class="user_color" name="user_color_<%= i %>">
         <option value=" #f44336 ">Red</option>
@@ -24,7 +31,7 @@
     </form>
 
     <div class="game_rules">
-      <h3>Rules</h3>
+      <h2>Rules</h2>
       <ul>
         <li>Each round the player must guess 4 colors</li>
         <li>The pegs on the right give feedback based on your guess:</li>
