@@ -21,6 +21,14 @@ get '/multi' do
   erb :multi
 end
 
+get '/new_game' do
+  session.clear
+  session[:guess_list] = []
+  session[:key_list] = []
+  GAME = Game.new(session[:multi_key])
+  erb :game
+end
+
 post '/multi' do
   session[:multi_key] = params.values
   redirect '/game'
