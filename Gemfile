@@ -1,1 +1,3 @@
-gem install bootstrap -v 4.4.1
+source 'https://rubygems.org'
+
+gem 'sinatra', require: 'sinatra/base'
