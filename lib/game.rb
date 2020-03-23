@@ -3,16 +3,16 @@ require_relative "guess"
 class Game
   attr_reader :secret_key, :round_count, :message, :colors, :color_key
   
-  def initialize
+  def initialize (key)
     @colors = {
-      :red =>  " #f44336 " ,
-      :green => " #27ae60 ",
-      :blue => " #3498db ",
-      :yellow => " #f1c40f ",
-      :orange => " #e67e22 ",
-      :purple => " #8e44ad "
+      :red =>  "#d32f2f" ,
+      :green => "#388e3c",
+      :blue => "#1976d2",
+      :yellow => "#fdd835",
+      :orange => "#e64a19",
+      :purple => "#7b1fa2"
     }
-    @secret_key = generate_key
+    @secret_key = key ? key : generate_key
     @color_key = generate_color_key
     @round_count = 1
     @message = "Go ahead and make a guess!"
@@ -33,12 +33,12 @@ class Game
   end
 
   def check_win(guess)
-    @round_count += 1
     if guess == @secret_key 
       winner
     elsif @round_count > 12
       loser
     else
+      @round_count += 1
       @message = message_maker
     end
   end
