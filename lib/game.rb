@@ -5,12 +5,12 @@ class Game
   
   def initialize (key)
     @colors = {
-      :red =>  "#d32f2f" ,
-      :green => "#388e3c",
-      :blue => "#1976d2",
-      :yellow => "#fdd835",
-      :orange => "#e64a19",
-      :purple => "#7b1fa2"
+      :Red =>  "#d32f2f",
+      :Green => "#388e3c",
+      :Blue => "#1976d2",
+      :Yellow => "#fdd835",
+      :Orange => "#e64a19",
+      :Purple => "#7b1fa2"
     }
     @secret_key = key ? key : generate_key
     @color_key = generate_color_key
@@ -35,7 +35,7 @@ class Game
   def check_win(guess)
     if guess == @secret_key 
       winner
-    elsif @round_count > 12
+    elsif @round_count == 12
       loser
     else
       @round_count += 1
