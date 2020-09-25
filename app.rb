@@ -1,4 +1,5 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
 
 require_relative './lib/game'
 require_relative './lib/guess'
@@ -13,7 +14,7 @@ end
 get '/game' do
   session[:guess_list] = []
   session[:key_list] = []
-  GAME = Game.new(session[:multi_key])
+  NEWGAME = Game.new(session[:multi_key])
   erb :game
 end
 
@@ -25,7 +26,7 @@ get '/new_game' do
   session.clear
   session[:guess_list] = []
   session[:key_list] = []
-  GAME = Game.new(session[:multi_key])
+  NEWGAME = Game.new(session[:multi_key])
   erb :game
 end
 

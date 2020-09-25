@@ -1,0 +1,40 @@
+.game_form {
+  width: 100%;
+  max-width: 320px;
+}
+
+#select-inputs {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  background-color: #666;
+}
+
+.user_color {
+  height: 3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  background-color: #666;
+  color: #fff;
+  outline: none;
+}
+
+.round_submit {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background: #229954;
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+}
+
+.round_submit:hover,
+.user_color:hover {
+}
+
+.user_color:focus {
+  background-color: #666;
+  color: #fff;
+}

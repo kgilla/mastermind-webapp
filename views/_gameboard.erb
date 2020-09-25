@@ -1,0 +1,36 @@
+<div id="game-board">
+
+  <div id="game-guesses">
+      <%(9).downto(0).each do |r| %>
+        <div class="round_pegs">
+          <%(0).upto(3).each do |i| %>
+            
+            <% if !session[:guess_list][r].nil? %>
+            <div class="colored_peg" 
+            style="background-color:<%= session[:guess_list][r][i]%>"></div>
+            <% else %> 
+            <div class="colored_peg" style="background-color: black"></div>
+            <% end %>
+
+          <% end %> 
+        </div>
+      <% end %>
+    </div>
+    
+  <div id="game-keys">
+    <%(9).downto(0).each do |r| %>
+      <div class="round_keys">
+        <%(0).upto(3).each do |i| %>
+          
+          <% if !session[:key_list][r].nil? %>
+          <div class="key_peg" 
+          style="background-color: <%= session[:key_list][r][i]%>"></div>
+          <% else %> 
+          <div class="key_peg" style="background-color: black"></div>
+          <% end %>
+        
+        <% end %> 
+      </div>
+    <% end %>
+  </div>
+  </div>

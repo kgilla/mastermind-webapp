@@ -1,0 +1,35 @@
+@import "./reset";
+@import "./controls";
+@import "./gameboard";
+@import "./navbar";
+@import "./pages";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
