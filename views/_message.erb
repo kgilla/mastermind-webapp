@@ -1,0 +1,12 @@
+<div id=message-box>
+    <h1 id="message-title"><%= GAME.message[:title]%></h1>
+    <p id="message-body"><%= GAME.message[:body]%></p>
+      <div class="round_pegs" id="message-pegs">
+        <%(0).upto(3).each do |i| %>
+          <div class="colored_peg" 
+          style="background-color:<%= GAME.secret_key[i]%>"></div>
+        <%end%>
+      </div>
+      <a href="/newgame" id="message-button">Play Again?</a>
+</div>
+<div class="overlay">

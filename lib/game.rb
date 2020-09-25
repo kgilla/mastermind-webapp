@@ -8,7 +8,7 @@ class Game
       :Red =>  "#d32f2f",
       :Green => "#388e3c",
       :Blue => "#1976d2",
-      :Yellow => "#fdd835",
+      :Yellow => "#fbc02d",
       :Orange => "#e64a19",
       :Purple => "#7b1fa2"
     }
@@ -39,28 +39,21 @@ class Game
     end_round(FALSE)
     else
       @round_count += 1
-      # @message = message_maker
     end
   end
 
   def end_round(win)
     if win ?
-      @message = "Congrats! You correctly guessed: #{@color_key}!" 
-      : @message = "Aww shucks! the secret key was #{@color_key}"
+      @message = {
+        :title => "Winner!",
+        :body => "Congratulations! You correctly guessed: #{@color_key}"
+      }
+      : @message = {
+        :title => "Game Over",
+        :body => "Aww shucks! the secret key was #{@color_key}" 
+      }
     end
+    puts @message
   end
-
-  # def winner 
-  #   @message = "Congrats! You correctly guessed: #{@color_key}!" 
-  # end
-
-  # def loser
-  #   @message = "Aww shucks! the secret key was #{@color_key}"
-  # end
-
-  # def message_maker
-  #   collection = ["I'm pretty sure there is a purple somewhere!", "You call that a guess?! Bwahahahaha", "I've seen better guesses from a mere baby!", "Are you even trying to win?"]
-  #   message = collection.sample(1).join("")
-  # end
 end
   

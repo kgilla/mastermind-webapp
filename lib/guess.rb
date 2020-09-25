@@ -5,9 +5,9 @@ class Guess
 
   def initialize(guess)
     @current_guess = guess.slice(0..3)
-    @temp_key = NEWGAME.secret_key.slice(0..3)
+    @temp_key = GAME.secret_key.slice(0..3)
     @hint_key = get_hint_key
-    NEWGAME.check_win(guess)
+    GAME.check_win(guess)
   end
 
   def get_hint_key

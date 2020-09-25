@@ -3,13 +3,17 @@
 @import "./gameboard";
 @import "./navbar";
 @import "./pages";
+@import "./message";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 body {
-  display: block;
   height: 100vh;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 * {
@@ -29,7 +33,17 @@ main {
 #game {
   display: flex;
   flex-direction: column;
-  border: 0.1rem solid #000;
+  border: 0.5rem solid #34495e;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }

@@ -2,6 +2,9 @@
 <div id="game">
   <%= erb :'_gameboard' %>
   <%= erb :'_controls' %>
+  <% if GAME.message != ""%>
+    <%= erb :'_message'%>
+  <%end%>
 </div>
 
 

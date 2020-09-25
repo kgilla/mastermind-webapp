@@ -1,37 +1,49 @@
 .game_form {
+  display: grid;
   width: 100%;
-  max-width: 320px;
+  background-color: #34495e;
+}
+
+.form-spacer {
+  background-color: #34495e;
+  height: 0.5rem;
 }
 
 #select-inputs {
-  display: flex;
-  justify-content: space-between;
-  height: 3rem;
-  background-color: #666;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  height: 2.5rem;
+  background-color: #34495e;
+  overflow: hidden;
 }
 
-.user_color {
-  height: 3rem;
+.user-color {
   font-size: 1rem;
   text-align: center;
   border: none;
-  background-color: #666;
+  border-radius: 0.5rem;
   color: #fff;
   outline: none;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .round_submit {
   width: 100%;
   padding: 1rem;
   border: none;
+  border-radius: 0.5rem;
   background: #229954;
   font-size: 1rem;
   color: #fff;
   outline: none;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .round_submit:hover,
 .user_color:hover {
+  filter: brightness(90%);
+  cursor: pointer;
 }
 
 .user_color:focus {
