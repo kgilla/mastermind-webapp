@@ -13,6 +13,13 @@ get '/' do
   erb :game
 end
 
+post '/' do
+  current_guess = Guess.new(params.values)
+  session[:guess_list] << params.values
+  session[:key_list] << current_guess.hint_key
+  erb :game
+end
+
 get "/newgame" do
   session.clear
   redirect "/"
@@ -27,9 +34,8 @@ post '/multi' do
   redirect '/'
 end
 
-post '/' do
-  current_guess = Guess.new(params.values)
-  session[:guess_list] << params.values
-  session[:key_list] << current_guess.hint_key
-  erb :game
+get "/rules" do
+  erb :rules
 end
+
+

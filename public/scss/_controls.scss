@@ -1,12 +1,13 @@
 .game_form {
   display: grid;
   width: 100%;
-  background-color: #34495e;
+  max-width: 20rem;
+  background-color: #37474f;
 }
 
 .form-spacer {
-  background-color: #34495e;
-  height: 0.5rem;
+  background-color: #37474f;
+  height: 0.75rem;
 }
 
 #select-inputs {
@@ -14,7 +15,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
   height: 2.5rem;
-  background-color: #34495e;
+  background-color: #37474f;
   overflow: hidden;
 }
 
@@ -25,7 +26,6 @@
   border-radius: 0.5rem;
   color: #fff;
   outline: none;
-  box-shadow: 0 8px 6px -6px black;
 }
 
 .round_submit {
@@ -37,7 +37,6 @@
   font-size: 1rem;
   color: #fff;
   outline: none;
-  box-shadow: 0 8px 6px -6px black;
 }
 
 .round_submit:hover,

@@ -1,16 +1,15 @@
 <div class="multi_box">
-  <h1>Choose Your Secret Code:</h1>
+  <h1 id="multi-title">Choose Your Secret Code</h1>
   <form class="game_form" method='POST' action='/multi'>
-    <%(0).upto(3).each do |i| %>
-      <select class="user_color" name="user_color_<%= i %>">
-        <option value="#d32f2f">Red</option>
-        <option value="#388e3c">Green</option>
-        <option value="#1976d2">Blue</option>
-        <option value="#fdd835">Yellow</option>
-        <option value="#e64a19">Orange</option>
-        <option value="#7b1fa2">Purple</option>
-      </select> 
-    <% end %><br/>
-    <input class="round_submit" type="submit" value="Enter!" href="/multi"/>  
+   <div id="select-inputs">
+      <% (0..3).each do |i| %>
+        <select class="user-color" name="user_color_<%= i %>">
+          <% GAME.colors.each_pair do |k, v|%>
+              <option value=<%=v%> name=<%=k%>><%= k %></option>
+          <%end%>
+        </select> 
+      <% end %>
+      </div>
+    <input class="round_submit spacer" type="submit" value="Enter!" href="/multi"/>  
   </form>
 </div>

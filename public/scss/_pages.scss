@@ -1,61 +1,73 @@
-.left_half {
-  text-align: center;
-}
+// Rules
 
-.left_box {
-}
-
-.game_info {
-}
-
-.game_rules {
-  text-align: left;
-  padding: 2vh;
-}
-
-footer {
-  height: 2%;
-}
-
-.main_title {
-  font-size: 10vh;
-  padding: 1%;
-  margin-bottom: 5%;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.title_box,
-.multi_box {
-  background-color: #37474f;
-  height: 50%;
-  width: 70%;
-  margin: auto;
-  padding: 2%;
-  text-align: center;
-  box-shadow: 0 1.8vh 1.6vh -1.6vh black;
-}
-
-.title_choice {
+#game_rules {
   display: flex;
   flex-direction: column;
-  font-size: 3vh;
-  border: solid black 0.4vh;
-  margin: 5%;
-  box-shadow: inset 0 0 1vh #000000;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 25rem;
+  place-self: center;
+  padding: 2rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  background-color: #444;
 }
 
-.single_choice,
-.multi_choice {
-  height: 50%;
-  padding: 2%;
-  color: white;
+#rules-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
-.multi_choice {
-  border-top: solid black 0.4vh;
+#rules-list {
+  list-style: decimal;
 }
+
+.rule {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+#rules-button {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  background-color: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+#rules-button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+// multi
 
 .multi_box {
-  padding: 8%;
+  background-color: #37474f;
+  padding: 2rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 25%;
+}
+
+#multi-title {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.spacer {
+  margin: 1rem 0;
 }
