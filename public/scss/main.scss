@@ -7,8 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 body {
-  height: 100vh;
-  width: 100vw;
   font-family: "Montserrat", sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");
@@ -25,20 +23,21 @@ html {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  height: 100%;
 }
 
 #game {
+  place-self: center;
   display: flex;
   flex-direction: column;
   border: 0.5rem solid #37474f;
   border-radius: 0.5rem;
   overflow: hidden;
-  height: 80vh;
+  height: 100%;
+  max-height: 36rem;
   width: 96%;
-  max-width: 500px;
+  max-width: 20rem;
 }
 
 .overlay {
@@ -52,6 +51,13 @@ main {
 }
 
 // Small devices (landscape phones, 576px and up)
+
+@media (min-width: 300px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 576px) {
   html {
     font-size: 16px;
@@ -61,20 +67,44 @@ main {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   html {
     font-size: 18px;
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   html {
+    font-size: 18px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1400px) {
+  html {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 2000px) {
+  html {
+    font-size: 26px;
   }
 }

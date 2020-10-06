@@ -1,5 +1,4 @@
     <form class="game_form" method='POST' action='/'>
-      <div class="form-spacer"></div>
       <div id="select-inputs">
       <% (0..3).each do |i| %>
         <select class="user-color" name="user_color_<%= i %>">
@@ -15,6 +14,5 @@
         </select> 
       <% end %>
       </div>
-      <div class="form-spacer"></div>
       <input class="round_submit" type="submit" value="Guess" href="/game"/>  
     </form>
