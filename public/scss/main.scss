@@ -36,6 +36,9 @@ main {
   border: 0.5rem solid #37474f;
   border-radius: 0.5rem;
   overflow: hidden;
+  height: 90vh;
+  width: 96%;
+  max-width: 600px;
 }
 
 .overlay {
@@ -46,4 +49,32 @@ main {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
 }
