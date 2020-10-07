@@ -1,10 +1,8 @@
 #game {
-  display: flex;
-  flex-direction: column;
-  width: 96%;
-  max-width: 25rem;
+  height: 100%;
+  width: 100%;
+  max-width: 20rem;
   padding: 0.5rem;
-  // border: 0.1rem solid #000;
   border-radius: 0.5rem;
   background-color: #37474f;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -14,14 +12,16 @@
   display: flex;
   height: 100%;
   width: 100%;
+  max-width: 25rem;
 }
 
 #game-guesses {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(1, 1fr);
+  gap: 0.2rem;
   width: 80%;
-  height: 100%;
+  padding-right: 0.5rem;
 }
 
 #game-keys {
@@ -41,8 +41,8 @@
 .round_pegs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-bottom: 0.1rem solid #37474f;
-  padding: 0.1rem 0;
+  gap: 0.5rem;
+  border-radius: 2rem;
 }
 
 .colored_peg {

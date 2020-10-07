@@ -1,18 +1,17 @@
 .game_form {
-  height: 8rem;
+  width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   background-color: #37474f;
 }
 
 #select-inputs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
   background-color: #37474f;
-  overflow: hidden;
 }
 
 .user-color {

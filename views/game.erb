@@ -1,13 +1,27 @@
 
 <div id="game-container">
   <div id="game">
-  <%= erb :'_gameboard' %>
-  <%= erb :'_controls' %>
-  <% if GAME.message != ""%>
-    <%= erb :'_message'%>
-  <%end%>
+    <%= erb :'_gameboard' %>
+    <%= erb :'_controls' %>
+  </div>
+    <div class="game-rules hide" id="game-rules">
+    <header class="rules-header">
+      <h2 class="rules-title">Rules</h2>
+    </header>
+    <ul class="rules-list">
+      <li class="rule">Each round the player guesses 4 colors to crack the code</li>
+      <li class="rule">The pegs on the right are known as key pegs and give feedback based on your guess</li>
+      <li class="rule">A red key peg is a correct color in the correct position</li>
+      <li class="rule">A white key peg is a correct color in an incorrect position</li>
+      <li class="rule">There can be duplicate colors</li>
+      <li class="rule">The goal is to crack the code in as few moves as possible!</li>
+    </ul>
+  </div>
+
 </div>
-</div>
+ <% if GAME.message != ""%>
+      <%= erb :'_message'%>
+    <%end%>
 
 
 
