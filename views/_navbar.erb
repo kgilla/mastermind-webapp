@@ -1,11 +1,14 @@
   <nav id="main-nav">
-    <button id="nav-expand"><i class="fas fa-bars" id="nav-expand-icon"></i></button>
     <h1 id="nav-title">Mastermind</h1>
+    <button id="nav-expand" class="hide"><i class="fas fa-bars" id="nav-expand-icon"></i></button>
+    <span id="nav-dropdown" class="hide">
+      <a href="/newgame" class="dropdown-link">New Game</a>
+      <a href="/multi" class="dropdown-link">New Multiplayer Game</a>
+      <a href="/rules" class="dropdown-link">Game Rules</a>
+    </span>
     <div id="nav-links" class="hide">
-      <h1 id="nav-title">Mastermind</h1>
       <a href="/newgame" class="nav-link">New Game</a>
       <a href="/multi" class="nav-link">New Multiplayer Game</a>
-      <a href="/rules" class="nav-link">Game Rules</a>
     </div>
   </nav>
   <div class="overlay hide" id="overlay">
