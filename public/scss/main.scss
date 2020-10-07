@@ -16,11 +16,19 @@ body {
 }
 
 main {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
@@ -43,6 +51,9 @@ main {
   html {
     font-size: 14px;
   }
+  #game {
+    grid-column: 1/3;
+  }
 }
 
 @media (min-width: 576px) {
@@ -53,45 +64,27 @@ main {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 @media (min-width: 900px) {
-  main {
-    grid-template-columns: 1fr 1fr;
+  #game {
+    margin-right: 5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 1400px) {
-  html {
-    font-size: 18px;
-  }
 }
 
 @media (min-width: 1600px) {
-  html {
-    font-size: 20px;
-  }
 }
 
 @media (min-width: 1800px) {
-  html {
-    font-size: 18px;
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 2000px) {
-  html {
-    font-size: 20px;
-  }
 }

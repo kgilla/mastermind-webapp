@@ -10,7 +10,7 @@
 #select-inputs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
   background-color: #37474f;
   overflow: hidden;
 }
@@ -18,12 +18,11 @@
 .user-color {
   -webkit-appearance: none;
   text-align: center;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #444;
   border-radius: 0.5rem;
   color: #fff;
   outline: none;
   font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .user-color:hover {
@@ -35,7 +34,7 @@
   -webkit-appearance: none;
   width: 100%;
   padding: 0.75rem;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #444;
   border-radius: 0.5rem;
   background: #229954;
   font-size: 1rem;

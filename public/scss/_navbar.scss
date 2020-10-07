@@ -1,12 +1,17 @@
+#nav-container {
+  background-color: #444;
+  margin-bottom: 1rem;
+}
+
 #main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   height: 3rem;
   padding: 0 2rem;
-  margin-bottom: 1rem;
-  background: #444;
 }
 
 #nav-title {
@@ -52,13 +57,9 @@
 }
 
 #nav-links {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
 }
 
 .nav-link {
-  border: 0.1rem solid #000;
   border-radius: 0.5rem;
   background-color: #555;
   padding: 0.5rem;

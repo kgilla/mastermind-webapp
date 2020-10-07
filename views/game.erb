@@ -1,11 +1,15 @@
 
-<div id="game">
+<div id="game-container">
+  <div id="game">
   <%= erb :'_gameboard' %>
   <%= erb :'_controls' %>
   <% if GAME.message != ""%>
     <%= erb :'_message'%>
   <%end%>
 </div>
+</div>
+
+
 
 
 

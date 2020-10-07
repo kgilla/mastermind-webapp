@@ -1,30 +1,37 @@
 // Rules
 
-#game_rules {
+.game-rules {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 96%;
   max-width: 25rem;
-  place-self: center;
-  padding: 2rem;
-  border: 0.1rem solid #000;
   border-radius: 0.5rem;
-  background-color: #37474f;
+  background-color: #444;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-#rules-title {
+.rules-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+  padding: 1rem;
+}
+
+.rules-title {
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
   color: #fff;
 }
 
-#rules-list {
-  list-style: decimal;
+.rules-list {
+  list-style: circle inside;
+  padding: 1rem;
 }
 
 .rule {
@@ -34,10 +41,18 @@
   line-height: 2;
 }
 
-#rules-button {
+.rules-footer {
   width: 100%;
-  padding: 1rem;
-  border: 0.1rem solid #000;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.rules-button {
+  width: 100%;
+  max-width: 20rem;
+  padding: 0.5rem;
+  border: 0.1rem solid #444;
   border-radius: 0.5rem;
   background-color: #27ae60;
   color: #fff;
@@ -45,7 +60,7 @@
   text-align: center;
 }
 
-#rules-button:hover {
+.rules-button:hover {
   cursor: pointer;
   filter: brightness(90%);
 }
@@ -53,12 +68,15 @@
 // multi
 
 .multi_box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  max-width: 25rem;
   background-color: #37474f;
   padding: 2rem;
-  border: 0.1rem solid #000;
   border-radius: 0.5rem;
-  position: fixed;
-  top: 25%;
 }
 
 #multi-title {
@@ -67,8 +85,4 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 2rem;
-}
-
-.spacer {
-  margin: 1rem 0;
 }
