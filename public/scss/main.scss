@@ -47,6 +47,12 @@ main {
 
 // Small devices (landscape phones, 576px and up)
 
+@media (min-width: 300px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 576px) {
   html {
     font-size: 16px;
