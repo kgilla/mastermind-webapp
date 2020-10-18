@@ -3,11 +3,11 @@ require_relative "game"
 class Guess
   attr_reader :hint_key, :temp_key, :current_guess
 
-  def initialize(guess)
+  def initialize(guess, game)
     @current_guess = guess.slice(0..3)
-    @temp_key = GAME.secret_key.slice(0..3)
+    @temp_key = game.secret_key.slice(0..3)
     @hint_key = get_hint_key
-    GAME.check_win(guess)
+    game.check_win(guess)
   end
 
   def get_hint_key

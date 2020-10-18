@@ -4,7 +4,7 @@
    <div id="select-inputs">
       <% (0..3).each do |i| %>
         <select class="user-color" name="user_color_<%= i %>">
-          <% GAME.colors.each_pair do |k, v|%>
+          <% game.colors.each_pair do |k, v|%>
               <option value=<%=v%> name=<%=k%>><%= k %></option>
           <%end%>
         </select> 

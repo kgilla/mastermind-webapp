@@ -2,7 +2,7 @@
 <div id="game-container">
   <div id="game">
     <%= erb :'_gameboard' %>
-    <%= erb :'_controls' %>
+    <%= erb :'_controls', locals: {game: @game} %>
   </div>
     <div class="game-rules hide" id="game-rules">
     <header class="rules-header">
@@ -19,9 +19,9 @@
   </div>
 
 </div>
- <% if GAME.message != ""%>
-      <%= erb :'_message'%>
-    <%end%>
+<% if session[:game].message != ""%>
+  <%= erb :'_message'%>
+<%end%>
 
 
 

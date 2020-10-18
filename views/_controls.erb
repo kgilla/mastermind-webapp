@@ -2,7 +2,7 @@
       <div id="select-inputs">
       <% (0..3).each do |i| %>
         <select class="user-color" name="user_color_<%= i %>">
-          <% GAME.colors.each_pair do |k, v|%>
+          <% session[:game].colors.each_pair do |k, v|%>
             <% if session[:guess_list] == [] %>
               <option value=<%=v%> name=<%=k%>><%= k %></option>
             <% elsif session[:guess_list].last[i] == v %>
